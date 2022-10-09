@@ -3,30 +3,46 @@ package main
 import "fmt"
 
 func diaDaSemana(numero int) string {
-	switch numero {
-	case 1:
-		return "Domingo"
-	case 2:
-		return "Segunda"
-	case 3:
-		return "Terça"
-	case 4:
-		return "Quarta"
-	case 5:
-		return "Quinta"
-	case 6:
-		return "Sexta"
-	case 7:
-		return "Sábado"
+	var dia string
+	switch {
+	case numero == 1:
+		dia = "Domingo"
+		fallthrough // cláusula faz a variável cair na próxima condição
+	case numero == 2:
+		dia = "Segunda"
+	case numero == 3:
+		dia = "Terça"
+	case numero == 4:
+		dia = "Quarta"
+	case numero == 5:
+		dia = "Quinta"
+	case numero == 6:
+		dia = "Sexta"
+	case numero == 7:
+		dia = "Sábado"
 	default:
-		return "Número inválido"
+		dia = "Número inválido"
 	}
+
+	return dia
 }
+
+// func diaDaSemana2(numero int) string {
+// 	switch {
+// 	case numero == 1:
+// 		return "Domingo"
+// 	default:
+// 		return "nulo"
+// 	}
+// }
 
 func main() {
 	// vai receber o retorno da função
-	dia := diaDaSemana(9)
+	// dia := diaDaSemana(2)
+	// dia2 := diaDaSemana2(0)
 
-	// printanto o valor de 'dia'
-	fmt.Println(dia)
+	qualDia := diaDaSemana(1)
+
+	// printanto o valor de 'qualDia'
+	fmt.Println(qualDia)
 }
