@@ -56,4 +56,8 @@ func main() {
 	fmt.Println(u2)
 
 	// fmt.Println(nomes)
+
+	for {
+		fmt.Println(1)
+	}
 }
